@@ -44,3 +44,38 @@ dogOnRooftop.heightInCentimeters
 dogOnRooftop.lengthInCentimeters
 dogOnRooftop.weightInGrams
 dogOnRooftop.heightToLengthRatio
+
+struct Book {
+    
+    let title: String
+    let author: String
+    let publishDate: String
+    let page: Int
+    let chapter: Int
+    let genre: String
+    let bookLengthInCentimeters: Double
+    let bookWidthInCentimeters: Double
+    let bookHeightInCentimeters: Double
+    let shelfLengthInCentimeters: Double
+    var booksFitInShelf: Double {
+        shelfLengthInCentimeters / bookWidthInCentimeters
+    }
+    
+}
+
+var firstBook = Book(
+    
+    title: "Three Little Pigs",
+    author: "Unknown",
+    publishDate: "16/7/1928",
+    page: 42,
+    chapter: 5,
+    genre: "Children's Literature",
+    bookLengthInCentimeters: 15,
+    bookWidthInCentimeters: 2,
+    bookHeightInCentimeters: 20,
+    shelfLengthInCentimeters: 150
+    
+)
+
+firstBook.booksFitInShelf
